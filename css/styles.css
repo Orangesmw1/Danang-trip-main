@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Philosopher;
+    src: url(../fonts/Philosopher-Regular.ttf);
+  }
+
 html, body {
-    font-family: 'Harmattan', sans-serif;
-    /* font-family: 'Rubik Moonrocks', cursive;
-    font-family: 'Sacramento', cursive; */
+    font-family: Philosopher, various;
+
 }
 
 /* --------- header ----------- */
@@ -21,8 +25,10 @@ header {
     background-color: white;
   }
   #switchButton {
-    padding: 9.5px 11px !important;
-    border: 1px solid white;
+    padding:10px 13px !important;
+    border: 1px solid #343a40;
+    border:1px solid white;
+
   }
   #switchButton .fa-sun {
     display: none;
@@ -30,6 +36,8 @@ header {
   #switchButton .fa-moon {
     display: block;
     color: white;
+    font-size: 1rem;
+    
   }
   
   /* Dark Theme*/
@@ -53,10 +61,9 @@ header {
 
 #myBody header nav {
     align-items: center !important;
-    padding: 0 10% !important;
-    background-color: transparent;
+    padding: 0 2% !important;
     width: 100%;
-    
+    height: 60px;
     
     position: absolute;
     top: 0;
@@ -68,10 +75,10 @@ header {
 }
 
 .navbar-brand {
-    font-size: 2.3rem;
-    font-family: 'Rubik Moonrocks', cursive;
-    color: rgb(255, 187, 0) !important;
+    font-size: 2.2rem;
+    color: white !important;
     font-weight: bold;
+    font-family: Philosopher, various;
 }
 
 .nav-item {
@@ -80,7 +87,7 @@ header {
 
 .nav-item a {
     color: white;
-    font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .nav-item a .fa-angle-down {
@@ -88,7 +95,7 @@ header {
 }
 
 .dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.356);
+    background-color: rgba(0, 0, 0, 0.555);
 }
 
 .dropdown-item { 
@@ -98,7 +105,7 @@ header {
 }
 
 .dropdown-item:hover {
-    background-color: rgb(241, 182, 19);
+    background-color: #343a40;
 }
 
 .dropdown-toggle::after {
@@ -155,9 +162,13 @@ nav .translate {
     color: white;
 }
 
+nav .translate:hover {
+    cursor: pointer;
+}
+
 /* Dark Theme Nav*/ 
 .dark .navbar-brand {
-    color: rgb(255, 187, 0) !important;
+    color: white !important;
 
 }
 
@@ -188,42 +199,33 @@ nav .translate {
     background-color: rgb(241, 182, 19);
 }
 
+
+/* ------------section----------- */
+
 /* carousel  */
 
-.carousel-inner {
-    height: 60vh;
+.carousel {
+    overflow: hidden;
 }
 
-.carousel-item {
-    background-position: center;
+.block-carousel {
+    height: 70vh;
+
+    background-image: url(../img/danangtrip11.jpg);
     background-size: cover;
+    background-position: top;
     background-attachment: fixed;
-    height: 100%;
-    width: 100%;
 
     position: relative;
-
-}
-
-.carousel-item-1 {
-    background-image: url(../img/home-carousel.jpg);
-}
-
-.carousel-item-2 {
-    background-image: url(../img/home-carousel2.jpg);
-}
-.carousel-item-3 {
-    background-image: url(../img/home-carousel3.jpg);
-}
-
-.carousel-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
     
+}
+
+.carousel .overlay {
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.411);
+
+    background-color: rgba(0, 0, 0, 0.678);
 }
 
 
