@@ -7,7 +7,12 @@
 @font-face {
     font-family: Philosopher;
     src: url(../fonts/Philosopher-Regular.ttf);
-  }
+}
+
+@font-face {
+    font-family: Philosopher Bold;
+    src: url(../fonts/Philosopher-Bold.ttf);
+}
 
 html, body {
     font-family: Philosopher, various;
@@ -75,10 +80,11 @@ header {
 }
 
 .navbar-brand {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: white !important;
     font-weight: bold;
     font-family: Philosopher, various;
+    text-transform: uppercase;
 }
 
 .nav-item {
@@ -199,9 +205,6 @@ nav .translate:hover {
     background-color: rgb(241, 182, 19);
 }
 
-
-/* ------------section----------- */
-
 /* carousel  */
 
 .carousel {
@@ -209,7 +212,7 @@ nav .translate:hover {
 }
 
 .block-carousel {
-    height: 70vh;
+    height: 100vh;
 
     background-image: url(../img/danangtrip11.jpg);
     background-size: cover;
@@ -228,6 +231,235 @@ nav .translate:hover {
     background-color: rgba(0, 0, 0, 0.678);
 }
 
+.carousel .block-content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%);
+
+
+}
+
+.carousel-title {
+
+}
+
+.carousel-title h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: Philosopher Bold, various;
+
+}
+
+.carousel-content p {
+    color: white;
+    font-size: 1.2rem
+}
+
+.block-content button {
+    border-color: white;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+.block-content button:hover {
+    color: white;
+}
+
+.block-content button i {
+    padding-left: 10px;
+    display: none;
+    
+}
+
+.block-content button:hover i {
+    display: inline-block;
+    
+    transition: all linear 0.2s;
+}
+
+svg {
+    position: absolute;
+    top: 8%;
+    right: -3%;
+
+    width:100%; 
+    height:100%;
+}
+svg path#curve {
+    fill:none; 
+    stroke:#295BA9;
+    stroke-width:2;  
+}
+
+svg path#maskCurve {
+  stroke: white;
+  stroke-width: 7;
+}
+
+svg #arrow {
+    fill:#d21; 
+    stroke: #000;
+    stroke-width:1;
+    width:20%;
+}
+
+/* ------------section----------- */
+
+/* click button  */
+.click-button {
+    
+}
+
+.block-img-click {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    height: 90px;
+    padding: 0 25%;
+    margin: 40px 0;
+    gap: 40px;
+}
+
+.img-button {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60%;
+    border-radius: 20px;
+
+    position: relative;
+
+
+}
+
+.img-button:hover {
+    cursor: pointer;
+}
+
+.img-button-1 {
+    background-image: url(../img/danangtrip1.jpg);
+}
+
+.img-button-2 {
+    background-image: url(../img/danangtrip2.jpg);
+}
+
+.img-button-3 {
+    background-image: url(../img/danangtrip3.jpg);
+}
+
+.img-button-4 {
+    background-image: url(../img/danangtrip4.jpg);
+}
+
+.img-button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.555);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-button .overlay h1 {
+    padding-top: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* destinations */
+.destinations {
+
+}
+
+/* Carousel */
+.about-us-service-title {
+    text-align: center;
+  }
+  
+  .carousel-container {
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    height: 450px;
+    max-width: 800px;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .carousel-card {
+    height: 300px;
+    width: 200px;
+    padding: 20px;
+    transition: 1s;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    background-color: #F58220;
+    color: #FFF;
+    cursor: pointer;
+    box-shadow: 1px 2px 3px grey;
+  }
+  
+  .carousel-icon {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+  }
+  
+  #far-left {
+    left: 15%;
+    transform: scale(.9) translateY(0%) translateX(-50%);
+    z-index: 5;
+    background-color: #F0F0F0;
+  }
+  
+  #left {
+    left: 30%;
+    transform: scale(1) translateY(0%) translateX(-50%);
+    z-index: 10;
+    background-color: #C3C3C3;
+  }
+  
+  #center {
+    left: 50%;
+    transform: scale(1.05) translateY(0%) translateX(-50%);
+    z-index: 15;
+  }
+  
+  #right {
+    left: 70%;
+    transform: scale(1) translateY(0%) translateX(-50%);
+    z-index: 10;
+    background-color: #C3C3C3;
+  }
+  
+  #far-right {
+    left: 80%;
+    transform: scale(.9) translateY(0%) translateX(-50%);
+    z-index: 5;
+    background-color: #F0F0F0;
+  }
+  
+  
+  .carousel-card:hover {
+  
+  }
 
 
 
