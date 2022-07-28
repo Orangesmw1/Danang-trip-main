@@ -31,7 +31,7 @@ header {
   }
   #switchButton {
     padding:10px 13px !important;
-    border: 1px solid #343a40;
+    border: 1px solid #66696b;
     border:1px solid white;
 
   }
@@ -335,6 +335,7 @@ svg #arrow {
     position: relative;
 
 
+
 }
 
 .img-button:hover {
@@ -367,6 +368,8 @@ svg #arrow {
     height: 100%;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.555);
+    border: 2px solid black;
+
 
     display: flex;
     align-items: center;
@@ -383,15 +386,16 @@ svg #arrow {
 
 /* destinations */
 .destinations {
-
+    height: 700px;
 }
 
 /* Carousel */
 .about-us-service-title {
     text-align: center;
-  }
+}
   
-  .carousel-container {
+.carousel-container {
+    height: 100%;
     padding: 20px;
     display: flex;
     text-align: center;
@@ -403,17 +407,82 @@ svg #arrow {
   }
   
   .carousel-card {
-    height: 300px;
-    width: 200px;
+    height: 600px;
+    width: 500px;
     padding: 20px;
     transition: 1s;
     opacity: 1;
     position: absolute;
     top: 0;
-    background-color: #F58220;
     color: #FFF;
     cursor: pointer;
-    box-shadow: 1px 2px 3px grey;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
+
+
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .carousel-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.466);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+  }
+
+  .block-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+  }
+
+  .carousel-card h3 , .carousel-card p , .carousel-card h6 ,.carousel-card button {
+    position: relative;
+    z-index: 100;
+  }
+
+  .carousel-card h3 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .carousel-card p {
+    font-size: 1.2rem;
+  }
+
+  .carousel-card p::before {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.342);
+  }
+
+  .carousel-card h6 {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+
+  .carousel-card button {
+    background-color: rgba(238, 188, 49, 0.877);
+    
+  }
+
+  .carousel-card button:hover {
+    color: #FFF;
   }
   
   .carousel-icon {
@@ -423,37 +492,41 @@ svg #arrow {
   }
   
   #far-left {
-    left: 15%;
+    left: -10%;
     transform: scale(.9) translateY(0%) translateX(-50%);
     z-index: 5;
-    background-color: #F0F0F0;
+    background-image: url(../img/danangtrip1.jpg);
+
   }
   
   #left {
-    left: 30%;
+    left: 15%;
     transform: scale(1) translateY(0%) translateX(-50%);
     z-index: 10;
-    background-color: #C3C3C3;
+    background-image: url(../img/danangtrip2.jpg);
   }
   
   #center {
     left: 50%;
     transform: scale(1.05) translateY(0%) translateX(-50%);
     z-index: 15;
+    background-image: url(../img/danangtrip3.jpg);
   }
   
   #right {
-    left: 70%;
+    left: 80%;
     transform: scale(1) translateY(0%) translateX(-50%);
     z-index: 10;
     background-color: #C3C3C3;
+    background-image: url(../img/danangtrip4.jpg);
   }
   
   #far-right {
-    left: 80%;
+    left: 100%;
     transform: scale(.9) translateY(0%) translateX(-50%);
     z-index: 5;
     background-color: #F0F0F0;
+    background-image: url(../img/danangtrip11.jpg);
   }
   
   
