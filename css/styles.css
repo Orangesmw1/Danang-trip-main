@@ -1,300 +1,288 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: Philosopher;
-    src: url(../fonts/Philosopher-Regular.ttf);
+  font-family: Philosopher;
+  src: url(../fonts/Philosopher-Regular.ttf);
 }
 
 @font-face {
-    font-family: Philosopher Bold;
-    src: url(../fonts/Philosopher-Bold.ttf);
+  font-family: Philosopher Bold;
+  src: url(../fonts/Philosopher-Bold.ttf);
 }
 
-html, body {
-    font-family: Philosopher, various;
-
+html,
+body {
+  font-family: Philosopher, various;
 }
 
 /* --------- header ----------- */
 
 header {
-    position: relative;
+  position: relative;
 }
 
 /* Light theme */
-#myBody{
-    background-color: white;
-  }
-  #switchButton {
-    padding:10px 13px !important;
-    border: 1px solid #66696b;
-    border:1px solid white;
+#myBody {
+  background-color: white;
+}
+#switchButton {
+  padding: 10px 13px !important;
+  border: 1px solid #66696b;
+  border: 1px solid white;
+}
+#switchButton .fa-sun {
+  display: none;
+}
+#switchButton .fa-moon {
+  display: block;
+  color: white;
+  font-size: 1rem;
+}
 
-  }
-  #switchButton .fa-sun {
-    display: none;
-  }
-  #switchButton .fa-moon {
-    display: block;
-    color: white;
-    font-size: 1rem;
-    
-  }
-  
-  /* Dark Theme*/
-  .dark#myBody{
-    background-color: #343a40;
-  }
-  .dark #switchButton {
-    background-color: white;
-  }
-  .dark #switchButton .fa-sun {
-    display: block;
-    color: #343a40;
-  }
-  
-  .dark #switchButton .fa-moon {
-    display: none;
-  }
-  
+/* Dark Theme*/
+.dark#myBody {
+  background-color: #343a40;
+}
+.dark #switchButton {
+  background-color: white;
+}
+.dark #switchButton .fa-sun {
+  display: block;
+  color: #343a40;
+}
+
+.dark #switchButton .fa-moon {
+  display: none;
+}
 
 /* nav  */
 
 #myBody header nav {
-    align-items: center !important;
-    padding: 0 2% !important;
-    width: 100%;
-    height: 60px;
-    
-    position: absolute;
-    top: 0;
-    z-index: 100;
+  align-items: center !important;
+  padding: 0 2% !important;
+  width: 100%;
+  height: 60px;
+
+  position: absolute;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar {
-    background: none;
+  background: none;
 }
 
 .navbar-brand {
-    font-size: 2rem;
-    color: white !important;
-    font-weight: bold;
-    font-family: Philosopher, various;
-    text-transform: uppercase;
+  font-size: 2rem;
+  color: white !important;
+  font-weight: bold;
+  font-family: Philosopher, various;
+  text-transform: uppercase;
 }
 
 .nav-item {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .nav-item a {
-    color: white;
-    font-size: 1.3rem;
+  color: white;
+  font-size: 1.3rem;
 }
 
 .nav-item a .fa-angle-down {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.555);
+  background-color: rgba(0, 0, 0, 0.555);
 }
 
-.dropdown-item { 
-    font-size: 1.3rem;
-    background-color: transparent;
-    color: white !important;
+.dropdown-item {
+  font-size: 1.3rem;
+  background-color: transparent;
+  color: white !important;
 }
 
 .dropdown-item:hover {
-    background-color: #343a40;
+  background-color: #343a40;
 }
 
 .dropdown-toggle::after {
-    display: none;
+  display: none;
 }
 
 .navbar-nav {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 nav form {
-   position: relative;
+  position: relative;
 }
 
 nav .form-control {
-   
 }
 
 nav .form-control::placeholder {
-    font-size: 1.3rem;
-    
+  font-size: 1.3rem;
 }
 
 nav .form-control.btn-outline-dark {
-    margin: 0;
+  margin: 0;
 }
 
 nav .form-control.btn-outline-dark:hover {
-    background-color: white;
+  background-color: white;
 }
 
 .btn-outline-dark:not(:disabled):not(.disabled):active {
-    background-color: white;
-
+  background-color: white;
 }
 
 nav form i {
-   position: absolute;
-   top: 25%;
-   right: 10%;
+  position: absolute;
+  top: 25%;
+  right: 10%;
 }
 
 nav form i:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 nav .translate {
-    font-size: 1.4rem;
-    font-weight: bold;
-    padding: 1px 7px;
-    border-radius: 5px;
-    border:1px solid white;
-    margin-left: 10px;
-    color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 1px 7px;
+  border-radius: 5px;
+  border: 1px solid white;
+  margin-left: 10px;
+  color: white;
 }
 
 nav .translate:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-/* Dark Theme Nav*/ 
+/* Dark Theme Nav*/
 .dark .navbar-brand {
-    color: white !important;
-
+  color: white !important;
 }
 
 .dark .nav-item .nav-link {
-    color: white !important;
+  color: white !important;
 }
 
 .dark nav .form-control.btn-outline-dark:hover {
-    background-color: white;
+  background-color: white;
 }
 
 .dark .btn-outline-dark:not(:disabled):not(.disabled):active {
-    background-color: white;
+  background-color: white;
 }
 
-.dark .dropdown-item { 
-    font-size: 1.3rem;
-    background-color: transparent;
-    color: white !important;
+.dark .dropdown-item {
+  font-size: 1.3rem;
+  background-color: transparent;
+  color: white !important;
 }
 
 .dark nav .translate {
-    color: white;
-    border:1px solid white;
+  color: white;
+  border: 1px solid white;
 }
 
 .dark .dropdown-item:hover {
-    background-color: rgb(241, 182, 19);
+  background-color: rgb(241, 182, 19);
 }
 
 /* carousel  */
 
 .carousel {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .block-carousel {
-    height: 100vh;
+  height: 100vh;
 
-    background-image: url(../img/danangtrip11.jpg);
-    background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
+  background-image: url(../img/danangtrip11.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
 
-    position: relative;
-    
+  position: relative;
 }
 
 .carousel .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.678);
+  background-color: rgba(0, 0, 0, 0.678);
 }
 
 .carousel .block-content {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    z-index: 100;
-    transform: translateX(-50%);
-
-
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
 }
 
 .carousel-title {
-
 }
 
 .carousel-title h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 5rem;
-    font-weight: bold;
-    font-family: Philosopher Bold, various;
-
+  color: white;
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: Philosopher Bold, various;
 }
 
 .carousel-content p {
-    color: white;
-    font-size: 1.2rem
+  color: white;
+  font-size: 1.2rem;
 }
 
 .block-content button {
-    border-color: white;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 15px 20px;
+  border-color: white;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px 20px;
 }
 
 .block-content button:hover {
-    color: white;
+  color: white;
 }
 
 .block-content button i {
-    padding-left: 10px;
-    display: none;
-    
+  padding-left: 10px;
+  display: none;
 }
 
 .block-content button:hover i {
-    display: inline-block;
-    
-    transition: all linear 0.2s;
+  display: inline-block;
+
+  transition: all linear 0.2s;
 }
 
 svg {
-    position: absolute;
-    top: 8%;
-    right: -3%;
+  position: absolute;
+  top: 8%;
+  right: -3%;
 
-    width:100%; 
-    height:100%;
+  width: 100%;
+  height: 100%;
 }
+
 svg path#curve {
-    fill:none; 
-    stroke:#295BA9;
-    stroke-width:2;  
+  fill: none;
+  stroke: #295ba9;
+  stroke-width: 2;
 }
 
 svg path#maskCurve {
@@ -303,235 +291,225 @@ svg path#maskCurve {
 }
 
 svg #arrow {
-    fill:#d21; 
-    stroke: #000;
-    stroke-width:1;
-    width:20%;
+  fill: #d21;
+  stroke: #000;
+  stroke-width: 1;
+  width: 20%;
 }
 
 /* ------------section----------- */
 
 /* click button  */
 .click-button {
-    
 }
 
 .block-img-click {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    height: 90px;
-    padding: 0 25%;
-    margin: 40px 0;
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 90px;
+  padding: 0 25%;
+  margin: 40px 0;
+  gap: 40px;
 }
 
 .img-button {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 60%;
-    border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 60%;
+  border-radius: 20px;
 
-    position: relative;
-
-
-
+  position: relative;
 }
 
 .img-button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .img-button-1 {
-    background-image: url(../img/danangtrip2.jpg);
+  background-image: url(../img/danangtrip2.jpg);
 }
 
 .img-button-2 {
-    background-image: url(../img/danangtrip3.jpg);
+  background-image: url(../img/danangtrip3.jpg);
 }
 
 .img-button-3 {
-    background-image: url(../img/danangtrip4.jpg);
+  background-image: url(../img/danangtrip4.jpg);
 }
 
 .img-button-4 {
-    background-image: url(../img/danangtrip1.jpg);
+  background-image: url(../img/danangtrip1.jpg);
 }
 
 .img-button .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 101;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
 
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    border: 2px solid black;
-    background-color: rgba(0, 0, 0, 0.555);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.555);
 
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .img-button .overlay h1 {
-    padding-top: 10px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
+  padding-top: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
 }
 
 /* destinations */
 .destinations {
-    height: 700px;
+  height: 700px;
+ 
 }
 
 /* Carousel */
 .about-us-service-title {
-    text-align: center;
+  text-align: center;
 }
-  
+
 .carousel-container {
-    height: 100%;
-    padding: 20px;
-    display: flex;
-    text-align: center;
-    position: relative;
-    height: 450px;
-    max-width: 800px;
-    min-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .carousel-card {
-    height: 600px;
-    width: 500px;
-    padding: 20px;
-    transition: 1s;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    color: #FFF;
-    cursor: pointer;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  position: relative;
+  height: 450px;
+  max-width: 800px;
+  min-width: 600px;
+  margin: 0 auto;
+}
 
+.carousel-card {
+  height: 600px;
+  width: 500px;
+  padding: 20px;
+  transition: 1s;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
 
+  background-position: center;
+  background-size: cover;
+}
 
-    background-position: center;
-    background-size: cover;
-  }
+.carousel-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.466);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
 
-  .carousel-card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.466);
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
+.block-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  }
+  height: 100%;
+}
 
-  .block-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.carousel-card h3,
+.carousel-card p,
+.carousel-card h6,
+.carousel-card button {
+  position: relative;
+  z-index: 100;
+}
 
-    height: 100%;
-  }
+.carousel-card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
 
-  .carousel-card h3 , .carousel-card p , .carousel-card h6 ,.carousel-card button {
-    position: relative;
-    z-index: 100;
-  }
+.carousel-card p {
+  font-size: 1.2rem;
+}
 
-  .carousel-card h3 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
+.carousel-card p::before {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.342);
+}
 
-  .carousel-card p {
-    font-size: 1.2rem;
-  }
+.carousel-card h6 {
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 1.1rem;
+}
 
-  .carousel-card p::before {
-    content: "";
-    position: absolute;
-    bottom: -20%;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.342);
-  }
+.carousel-card button {
+  background-color: rgba(238, 188, 49, 0.877);
+}
 
-  .carousel-card h6 {
-    margin-top: 40px;
-    padding: 20px;
-    font-size: 1.1rem;
-  }
+.carousel-card button:hover {
+  color: #fff;
+}
 
-  .carousel-card button {
-    background-color: rgba(238, 188, 49, 0.877);
-    
-  }
+.carousel-icon {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+}
 
-  .carousel-card button:hover {
-    color: #FFF;
-  }
-  
-  .carousel-icon {
-    border-radius: 50%;
-    height: 75px;
-    width: 75px;
-  }
-  
-  #far-left {
-    left: -10%;
-    transform: scale(.9) translateY(0%) translateX(-50%);
-    z-index: 5;
-    background-image: url(../img/danangtrip2.jpg) !important;
+#far-left {
+  left: -10%;
+  transform: scale(0.9) translateY(0%) translateX(-50%);
+  z-index: 5;
+  background-image: url(../img/danangtrip2.jpg) !important;
+}
 
-  }
-  
-  #left {
-    left: 15%;
-    transform: scale(1) translateY(0%) translateX(-50%);
-    z-index: 10;
-    background-image: url(../img/danangtrip1.jpg) !important;
-  }
-  
-  #center {
-    left: 50%;
-    transform: scale(1.05) translateY(0%) translateX(-50%);
-    z-index: 15;
-    background-image: url(../img/danangtrip4.jpg) !important;
-  }
-  
-  #right {
-    left: 80%;
-    transform: scale(1) translateY(0%) translateX(-50%);
-    z-index: 10;
-    background-color: #C3C3C3;
-    background-image: url(../img/danangtrip3.jpg) !important;
-  }
-  
-  #far-right {
-    left: 100%;
-    transform: scale(.9) translateY(0%) translateX(-50%);
-    z-index: 5;
-    background-color: #F0F0F0;
-    background-image: url(../img/danangtrip11.jpg) !important;
-  }
-  
-  
-  .carousel-card:hover {
-  
-  }
+#left {
+  left: 15%;
+  transform: scale(1) translateY(0%) translateX(-50%);
+  z-index: 10;
+  background-image: url(../img/danangtrip1.jpg) !important;
+}
 
+#center {
+  left: 50%;
+  transform: scale(1.05) translateY(0%) translateX(-50%);
+  z-index: 15;
+  background-image: url(../img/danangtrip4.jpg) !important;
+}
 
+#right {
+  left: 80%;
+  transform: scale(1) translateY(0%) translateX(-50%);
+  z-index: 10;
+  background-color: #c3c3c3;
+  background-image: url(../img/danangtrip3.jpg) !important;
+}
+
+#far-right {
+  left: 100%;
+  transform: scale(0.9) translateY(0%) translateX(-50%);
+  z-index: 5;
+  background-color: #f0f0f0;
+  background-image: url(../img/danangtrip11.jpg) !important;
+}
+
+.carousel-card:hover {
+}
