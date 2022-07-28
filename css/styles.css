@@ -343,19 +343,19 @@ svg #arrow {
 }
 
 .img-button-1 {
-    background-image: url(../img/danangtrip1.jpg);
-}
-
-.img-button-2 {
     background-image: url(../img/danangtrip2.jpg);
 }
 
-.img-button-3 {
+.img-button-2 {
     background-image: url(../img/danangtrip3.jpg);
 }
 
-.img-button-4 {
+.img-button-3 {
     background-image: url(../img/danangtrip4.jpg);
+}
+
+.img-button-4 {
+    background-image: url(../img/danangtrip1.jpg);
 }
 
 .img-button .overlay {
@@ -367,8 +367,8 @@ svg #arrow {
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.555);
     border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.555);
 
 
     display: flex;
@@ -495,7 +495,7 @@ svg #arrow {
     left: -10%;
     transform: scale(.9) translateY(0%) translateX(-50%);
     z-index: 5;
-    background-image: url(../img/danangtrip1.jpg);
+    background-image: url(../img/danangtrip2.jpg) !important;
 
   }
   
@@ -503,14 +503,14 @@ svg #arrow {
     left: 15%;
     transform: scale(1) translateY(0%) translateX(-50%);
     z-index: 10;
-    background-image: url(../img/danangtrip2.jpg);
+    background-image: url(../img/danangtrip1.jpg) !important;
   }
   
   #center {
     left: 50%;
     transform: scale(1.05) translateY(0%) translateX(-50%);
     z-index: 15;
-    background-image: url(../img/danangtrip3.jpg);
+    background-image: url(../img/danangtrip4.jpg) !important;
   }
   
   #right {
@@ -518,7 +518,7 @@ svg #arrow {
     transform: scale(1) translateY(0%) translateX(-50%);
     z-index: 10;
     background-color: #C3C3C3;
-    background-image: url(../img/danangtrip4.jpg);
+    background-image: url(../img/danangtrip3.jpg) !important;
   }
   
   #far-right {
@@ -526,7 +526,7 @@ svg #arrow {
     transform: scale(.9) translateY(0%) translateX(-50%);
     z-index: 5;
     background-color: #F0F0F0;
-    background-image: url(../img/danangtrip11.jpg);
+    background-image: url(../img/danangtrip11.jpg) !important;
   }
   
   
