@@ -17,6 +17,7 @@
 html,
 body {
   font-family: Philosopher, various;
+  scroll-behavior: smooth;
 }
 
 /* --------- header ----------- */
@@ -52,7 +53,7 @@ header {
 }
 .dark #switchButton .fa-sun {
   display: block;
-  color: #343a40;
+  color: #343a41;
 }
 
 .dark #switchButton .fa-moon {
@@ -301,15 +302,17 @@ svg #arrow {
 
 /* click button  */
 .click-button {
+
+  
 }
 
 .block-img-click {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  height: 90px;
-  padding: 0 25%;
-  margin: 40px 0;
-  gap: 40px;
+  height: 100px;
+  
+  
+ 
 }
 
 .img-button {
@@ -317,7 +320,7 @@ svg #arrow {
   background-position: center;
   width: 100%;
   height: 60%;
-  border-radius: 20px;
+  
 
   position: relative;
 }
@@ -350,28 +353,60 @@ svg #arrow {
 
   width: 100%;
   height: 100%;
-  border-radius: 20px;
-  border: 2px solid black;
-  background-color: rgba(0, 0, 0, 0.555);
+
+  background-color: rgba(0, 0, 0, 0.726);
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.img-button .overlay h1 {
-  padding-top: 10px;
+.img-button .overlay a {
   font-size: 1.3rem;
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
   color: white;
+  
 }
 
 /* destinations */
 .destinations {
-  height: 700px;
+  height: 850px;
+  /* background-image: url(../img/danangtrip5.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; */
+  padding-top: 50px;
+
+  position: relative;
  
 }
+
+.destination-title h1 {
+  text-align: center;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  position: relative;
+  
+}
+
+.destination-title h1::before {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 8%;
+  height: 2px;
+  background-color: orange;
+
+}
+
+
 
 /* Carousel */
 .about-us-service-title {
@@ -461,7 +496,8 @@ svg #arrow {
 }
 
 .carousel-card button {
-  background-color: rgba(238, 188, 49, 0.877);
+  background-color: rgba(255, 196, 0, 0.836);
+
 }
 
 .carousel-card button:hover {
@@ -513,3 +549,111 @@ svg #arrow {
 
 .carousel-card:hover {
 }
+
+/* Dark Theme Destination*/
+
+.dark .destination-title h1 {
+  color: #000;
+}
+
+.dark .destination-title h1::before {
+  background-color: #000 ;
+}
+
+.dark .carousel-card button {
+  background-color: transparent;
+  border: 1px solid #e2c93c;
+  color: #fff;
+}
+
+.dark .carousel-card button:hover {
+  color: #e2c93c;
+}
+
+/* blogs  */
+
+.blogs {
+  background-image: url(../img/danangtrip5.jpg);
+  background-position: top;
+  background-size:cover;
+  background-attachment: fixed;
+
+  padding: 50px 0;
+
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogs::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.808);
+}
+
+.blogs-title {
+  padding: 0 0 50px;
+  position: relative;
+  z-index: 100;
+}
+
+.blogs-title h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+
+.blogs-title h1::before {
+  content: "";
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e2c93c;
+}
+
+.blogs-content {
+  position: relative;
+  
+  z-index: 100;
+  width: 70%;
+
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 20px;
+}
+
+.blog-clone {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.blog-clone img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 20px;
+
+}
+
+.blog-clone-main {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+
+
+
+
+
