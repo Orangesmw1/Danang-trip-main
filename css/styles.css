@@ -636,6 +636,25 @@ svg #arrow {
   width: 100%;
   height: 100%;
   border-radius: 20px;
+
+  position: relative;
+}
+
+.blog-clone .overlay {
+  background-color: rgba(0, 0, 0, 0.041);
+  color: white;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+
+}
+
+.header-card {
+  display: flex;
 }
 
 .blog-clone img {
@@ -651,6 +670,10 @@ svg #arrow {
   grid-column: 1/3;
   grid-row: 1/3;
 }
+
+
+
+
 
 
 
