@@ -975,7 +975,94 @@ svg #arrow {
   height: 80%;
 }
 
+/* trip-prearation  */
 
+
+.trip-prearation {
+  background: #fff;
+  height: 500px;
+
+}
+
+.block-trip {
+  position: relative;
+  height: 100%;
+}
+
+.list {
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+
+.list li {
+  list-style-type: none;
+  
+  width: 200px;
+  height: 200px;
+  opacity: .25;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  border-radius: 2px;
+  background: #9C89B8;
+  transition: transform 1s, opacity 1s;
+}
+
+.list .act {
+  opacity: 1;
+  background-image: url(../img/danangtrip1.jpg);
+
+}
+
+.list .prev,
+.list .next {
+  cursor: pointer;
+}
+
+.list .prev {
+  transform: translateX(-220px) scale(.85);
+
+  background-image: url(../img/danangtrip1.jpg);
+}
+
+.list .next {
+  transform: translateX(220px) scale(.85);
+  background-image: url(../img/danangtrip1.jpg);
+
+}
+
+.list .hide {
+  transform: translateX(-420px) scale(.85);
+  background-image: url(../img/danangtrip1.jpg);
+
+}
+
+.list .new-next {
+  transform: translateX(420px) scale(.85);
+  background-image: url(../img/danangtrip1.jpg);
+
+}
+
+.list .hide,
+.list .new-next {
+  opacity: 0;
+  transition: opacity .5s, transform .5s;
+}
+
+.swipe {
+  width: 270px;
+  height: 200px;
+  position: absolute;
+  background-color: green;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+}
 
 
 
