@@ -408,166 +408,93 @@ svg #arrow {
 
 
 
-/* Carousel */
-.about-us-service-title {
-  text-align: center;
-}
-
-.carousel-container {
-  height: 100%;
-  padding: 20px;
-  display: flex;
-  text-align: center;
+#carousel {
   position: relative;
-  height: 450px;
-  max-width: 800px;
-  min-width: 600px;
-  margin: 0 auto;
+  height: 400px;
+  top: 35%;
+  transform: translateY(-50%);
+  overflow: hidden;
 }
-
-.carousel-card {
-  height: 600px;
-  width: 500px;
-  padding: 20px;
-  transition: 1s;
+#carousel div {
+  position: absolute;
+  transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
   opacity: 1;
-  position: absolute;
-  top: 0;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
-
-  background-position: center;
-  background-size: cover;
 }
-
-.carousel-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.466);
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
+#carousel div img {
+  width: 400px;
+  transition: width 400ms;
+   -webkit-user-drag: none;
 }
-
-.block-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  height: 100%;
+#carousel div.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
 }
-
-.carousel-card h3,
-.carousel-card p,
-.carousel-card h6,
-.carousel-card button {
-  position: relative;
-  z-index: 100;
+#carousel div.hideLeft img {
+  width: 200px;
 }
-
-.carousel-card h3 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.carousel-card p {
-  font-size: 1.2rem;
-}
-
-.carousel-card p::before {
-  content: "";
-  position: absolute;
-  bottom: -20%;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.342);
-}
-
-.carousel-card h6 {
-  margin-top: 40px;
-  padding: 20px;
-  font-size: 1.1rem;
-}
-
-.carousel-card button {
-  background-color: rgba(255, 196, 0, 0.836);
-
-}
-
-.carousel-card button:hover {
-  color: #fff;
-}
-
-.carousel-icon {
-  border-radius: 50%;
-  height: 75px;
-  width: 75px;
-}
-
-#far-left {
-  left: -10%;
-  transform: scale(0.9) translateY(0%) translateX(-50%);
-  z-index: 5;
-  background-image: url(../img/danangtrip2.jpg) !important;
-}
-
-#left {
-  left: 15%;
-  transform: scale(1) translateY(0%) translateX(-50%);
-  z-index: 10;
-  background-image: url(../img/danangtrip1.jpg) !important;
-}
-
-#center {
-  left: 50%;
-  transform: scale(1.05) translateY(0%) translateX(-50%);
-  z-index: 15;
-  background-image: url(../img/danangtrip4.jpg) !important;
-}
-
-#right {
-  left: 80%;
-  transform: scale(1) translateY(0%) translateX(-50%);
-  z-index: 10;
-  background-color: #c3c3c3;
-  background-image: url(../img/danangtrip3.jpg) !important;
-}
-
-#far-right {
+#carousel div.hideRight {
   left: 100%;
-  transform: scale(0.9) translateY(0%) translateX(-50%);
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel div.hideRight img {
+  width: 200px;
+}
+#carousel div.prev {
   z-index: 5;
-  background-color: #f0f0f0;
-  background-image: url(../img/danangtrip11.jpg) !important;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel img:hover {
+  cursor: pointer
+}
+#carousel div.prev img {
+  width: 300px;
+}
+#carousel div.prevLeftSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel div.prevLeftSecond img {
+  width: 200px;
+}
+#carousel div.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+#carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel div.next img {
+  width: 300px;
+}
+#carousel div.nextRightSecond {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel div.nextRightSecond img {
+  width: 200px;
 }
 
-.carousel-card:hover {
+.destinations-content .buttons {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
 }
 
-/* Dark Theme Destination*/
+.destinations-content .buttons .prev {
 
-.dark .destination-title h1 {
-  color: #000;
-}
-
-.dark .destination-title h1::before {
-  background-color: #000 ;
-}
-
-.dark .carousel-card button {
-  background-color: transparent;
-  border: 1px solid #e2c93c;
-  color: #fff;
-}
-
-.dark .carousel-card button:hover {
-  color: #e2c93c;
 }
 
 /* block-food-blogs  */
@@ -978,91 +905,6 @@ svg #arrow {
 /* trip-prearation  */
 
 
-.trip-prearation {
-  background: #fff;
-  height: 500px;
-
-}
-
-.block-trip {
-  position: relative;
-  height: 100%;
-}
-
-.list {
-  height: 200px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%)
-}
-
-.list li {
-  list-style-type: none;
-  
-  width: 200px;
-  height: 200px;
-  opacity: .25;
-  position: absolute;
-  left: 50%;
-  margin-left: -100px;
-  border-radius: 2px;
-  background: #9C89B8;
-  transition: transform 1s, opacity 1s;
-}
-
-.list .act {
-  opacity: 1;
-  background-image: url(../img/danangtrip1.jpg);
-
-}
-
-.list .prev,
-.list .next {
-  cursor: pointer;
-}
-
-.list .prev {
-  transform: translateX(-220px) scale(.85);
-
-  background-image: url(../img/danangtrip1.jpg);
-}
-
-.list .next {
-  transform: translateX(220px) scale(.85);
-  background-image: url(../img/danangtrip1.jpg);
-
-}
-
-.list .hide {
-  transform: translateX(-420px) scale(.85);
-  background-image: url(../img/danangtrip1.jpg);
-
-}
-
-.list .new-next {
-  transform: translateX(420px) scale(.85);
-  background-image: url(../img/danangtrip1.jpg);
-
-}
-
-.list .hide,
-.list .new-next {
-  opacity: 0;
-  transition: opacity .5s, transform .5s;
-}
-
-.swipe {
-  width: 270px;
-  height: 200px;
-  position: absolute;
-  background-color: green;
-  border-radius: 2px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  opacity: 0;
-}
 
 
 
