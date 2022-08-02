@@ -411,7 +411,7 @@ svg #arrow {
 #carousel {
   position: relative;
 
-  height: 660px;
+  height: 650px;
   top: 40%;
   transform: translateY(-50%);
   overflow: hidden;
@@ -424,8 +424,74 @@ svg #arrow {
 
  
 }
+
+#carousel div .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.699);
+  border-radius: 20px;
+
+  color: #fff;
+  overflow: hidden;
+  padding: 100px 50px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+  opacity: 0;
+}
+
+#carousel div:active .overlay {
+  opacity: 1;
+}
+
+#carousel div:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#carousel div.prevLeftSecond:active .overlay , #carousel div.nextRightSecond:active .overlay {
+  opacity: 0;
+}
+
+#carousel div.prevLeftSecond:hover .overlay , #carousel div.nextRightSecond:hover .overlay {
+  opacity: 0;
+}
+
+
+#carousel div .overlay h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+#carousel div .overlay p {
+  position: relative;
+
+  font-size: 1.2rem;
+
+
+}
+
+#carousel div .overlay p::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  width: 60%;
+  height: 2px;
+  background-color: #66696b;
+}
+
 #carousel div img {
-  width: 550px;
+  width: 500px;
+  border-radius: 20px;
+  
  
   transition: width 400ms;
    -webkit-user-drag: none;
@@ -450,6 +516,7 @@ svg #arrow {
   z-index: 5;
   left: 30%;
   transform: translateY(50px) translateX(-50%);
+  
 }
 #carousel img:hover {
   cursor: pointer
@@ -461,7 +528,7 @@ svg #arrow {
   z-index: 4;
   left: 15%;
   transform: translateY(50%) translateX(-50%);
-  opacity: 0.7;
+  opacity: 0.4;
 }
 #carousel div.prevLeftSecond img {
   width: 250px;
@@ -484,7 +551,7 @@ svg #arrow {
   z-index: 4;
   left: 85%;
   transform: translateY(50%) translateX(-50%);
-  opacity: 0.7;
+  opacity: 0.4;
 }
 #carousel div.nextRightSecond img {
   width: 250px;
