@@ -1026,15 +1026,21 @@ svg #arrow {
 
 /* trip-prearation  */
 
+
+
 .trip-prearation {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: radial-gradient(circle at center, #555, #222);
+  height: 500px;
+  background: #fff;
   font-family: "Acme";
   perspective: 600px;
+  margin: 50px 0;
+
+  
 }
+
 .trip-prearation * {
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -1043,12 +1049,77 @@ svg #arrow {
   transform-style: preserve-3d;
   backface-visibility: hidden;
 }
-body #wrapper {
-  width: 700px;
+
+.trip-prearation-title {
+  width: 180px;
   height: 500px;
+  text-align: center;
+  font-family: Philosopher, various;
+  color: #fff;
+  
+  background: url(../img/danangtrip1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+
+  position: relative;
+
+}
+
+.trip-prearation-title::after {
+  content:  "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.459);
+ 
+  
+}
+
+.trip-prearation-title ul {
+  list-style: none;
+  
+}
+
+.trip-text {
+ font-size: 1.9rem;
+ line-height: 0.9;
+ margin-top: 5px;
+
+ position: relative;
+  z-index: 100;
+}
+
+.trip-text ul li:first-child {
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+
+.pre-text {
+  font-size: 1.9rem;
+  line-height: 1;
+
+  
+  position: relative;
+  z-index: 100;
+}
+
+.pre-text ul li:first-child {
+  font-size: 3.8rem;
+  font-weight: bold;
+
+
+}
+
+body #wrapper {
+  width: 60%;
+  height: 100%;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
+  margin-right: 20px;
+
 }
 body #wrapper.flash {
   animation: bend 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1 forwards;
@@ -1069,8 +1140,8 @@ body #wrapper.flash {
 }
 body #wrapper #trigger {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   box-shadow: 0 0 0 1px #ccc, 0 0 0 1px #ccc;
   z-index: 999;
   border-radius: 100%;
@@ -1100,6 +1171,7 @@ body #wrapper #trigger:before {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.2s ease-in-out;
+  font-size: 1.5rem;
 }
 body #wrapper.fade {
   opacity: 0.25;
@@ -1112,6 +1184,8 @@ body #wrapper .card {
   pointer-events: none;
   z-index: 0;
   transition: transform 0.4s ease-in-out;
+  border: none;
+  
 }
 body #wrapper .card .content {
   width: 100%;
@@ -1120,7 +1194,7 @@ body #wrapper .card .content {
   left: 0;
   top: 0;
   overflow: hidden;
-  background: linear-gradient(to bottom, transparent calc(50% - 1px), rgba(0, 0, 0, 0.05) calc(50% - 1px), rgba(0, 0, 0, 0.05) 50%, transparent 50%), linear-gradient(to right, transparent calc(56% - 1px), rgba(0, 0, 0, 0.05) calc(56% - 1px), rgba(0, 0, 0, 0.05) 56%, transparent 56%), #ccc;
+  background: transparent;
   background-size: 100%, 100% 50%, 100%;
   background-repeat: no-repeat;
   background-position: 50%, 50% 100%, 50%;
@@ -1130,9 +1204,9 @@ body #wrapper .card .content h1 {
   position: absolute;
   left: calc(25% + 40px);
   top: 20px;
-  font-size: 120px;
+  font-size: 5rem;
   margin: 0px;
-  color: rgba(0, 0, 0, 0.175);
+  color: rgba(0, 0, 0, 0.767);
   text-transform: uppercase;
 }
 body #wrapper .card .content p {
@@ -1144,7 +1218,7 @@ body #wrapper .card .content p {
   left: calc(25% + 40px);
   line-height: 1.5;
   font-family: "Montserrat";
-  font-size: 14px;
+  font-size: 1.2rem;
   color: #555;
   padding: 5px;
   box-sizing: border-box;
@@ -1157,9 +1231,9 @@ body #wrapper .card .content h3 {
   top: 20px;
   font-size: 80px;
   margin: 0;
-  color: transparent;
+  color: #343a40;
   overflow: hidden;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.747);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0s ease-in-out, right 0.4s ease-in-out;
@@ -1186,7 +1260,7 @@ body #wrapper .card .content:before, body #wrapper .card .content:after, body #w
   content: "";
   position: absolute;
   width: 112.5%;
-  height: 100%;
+  height: 500px;
   left: 12.5%;
   top: 0;
   background-size: cover;
@@ -1197,11 +1271,11 @@ body #wrapper .card .content:after {
   transition: 0.5s ease-in-out;
 }
 body #wrapper .card .content:before, body #wrapper .card .content .inner:after {
-  filter: saturate(0);
+  
 }
 body #wrapper .card .content .inner {
   width: 40%;
-  height: 45%;
+  height: 60%;
   left: auto;
   right: 0%;
   z-index: 999;
@@ -1222,6 +1296,7 @@ body #wrapper .card .content .inner:before, body #wrapper .card .content .inner:
   z-index: 2;
   transform: scaleX(1);
   transform-origin: right;
+  border: 2px solid;
 }
 body #wrapper .card .content .inner:after {
   background-size: cover;
