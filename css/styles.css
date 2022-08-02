@@ -410,18 +410,23 @@ svg #arrow {
 
 #carousel {
   position: relative;
-  height: 400px;
-  top: 35%;
+
+  height: 660px;
+  top: 40%;
   transform: translateY(-50%);
   overflow: hidden;
+  z-index: 100;
 }
 #carousel div {
   position: absolute;
   transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
   opacity: 1;
+
+ 
 }
 #carousel div img {
-  width: 400px;
+  width: 550px;
+ 
   transition: width 400ms;
    -webkit-user-drag: none;
 }
@@ -450,7 +455,7 @@ svg #arrow {
   cursor: pointer
 }
 #carousel div.prev img {
-  width: 300px;
+  width: 400px;
 }
 #carousel div.prevLeftSecond {
   z-index: 4;
@@ -459,7 +464,7 @@ svg #arrow {
   opacity: 0.7;
 }
 #carousel div.prevLeftSecond img {
-  width: 200px;
+  width: 250px;
 }
 #carousel div.selected {
   z-index: 10;
@@ -472,7 +477,8 @@ svg #arrow {
   transform: translateY(50px) translateX(-50%);
 }
 #carousel div.next img {
-  width: 300px;
+  width: 400px;
+
 }
 #carousel div.nextRightSecond {
   z-index: 4;
@@ -481,19 +487,63 @@ svg #arrow {
   opacity: 0.7;
 }
 #carousel div.nextRightSecond img {
-  width: 200px;
+  width: 250px;
 }
 
-.destinations-content .buttons {
+.destinations .buttons {
   position: absolute !important;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+ 
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+  color: #66696ba6;
+
+  position: relative;
+  
+  cursor: pointer;
+  opacity: 0;
+  transition: all linear 0.5s;
+}
+
+.destinations:hover .buttons {
+  opacity: 1;
+}
+
+.destinations .buttons #prev {
+  
+  position: relative;
+  z-index: 100;
+
+  width: 50px !important;
+  height: 50px !important;
+  text-align: center;
+  margin-bottom: 40px;
+
+  font-size: 3rem;
+
 
 }
 
-.destinations-content .buttons .prev {
+
+.destinations .buttons #next {
+  
+  position: relative;
+  z-index: 100;
+
+  width: 50px !important;
+  height: 50px !important;
+  text-align: center;
+  margin-bottom: 40px;
+
+  font-size: 3rem;
+
 
 }
 
