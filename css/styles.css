@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 @font-face {
   font-family: Philosopher;
   src: url(../fonts/Philosopher-Regular.ttf);
@@ -405,183 +406,19 @@ svg #arrow {
 }
 
 
+
+
+
 /* block-food-blogs  */
 
 
 .block-food-blogs {
-  background-image: url(../img/danangtrip5.jpg);
-  background-position: top;
+  background-image: url(../img/danangtrip11.jpg);
+  background-position: center;
   background-size:cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-}
-
-/* foods  */
-
-.foods{
-	overflow: hidden;
-	height: 750px;
-	display: flex;
-  flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-
-  position: relative;
-}
-
-.foods::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.808);
-}
-
-.foods-title {
-  margin-top: 50px;
-  margin-bottom: 100px !important;
-  padding: 0 0 50px;
-  position: relative;
-  z-index: 100;
-}
-
-.foods-title h1 {
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: bold;
-}
-
-.foods-title h1::before {
-  content: "";
-  position: absolute;
-  bottom: 40%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #e2c93c;
-}
-
-.slider-box{
-	width: 30vh;
-	perspective: 1000px;
-
-  position: absolute;
-  top: 30%;
-	
-
-
-  z-index: 100;
-}
-.carousel-foods{
-	width: 100%;
-	transform-style: preserve-3d;
-	animation: rotate 25s infinite linear; /*  speed:  */
-}
-
-.carousel-foods .carousel-item-foods{
-	width: 90%;
-	height: 180px;
-	position: absolute;
-	overflow: hidden;
-}
-.it1{
-	transform: rotateY(0deg) translateZ(50vh);
-}
-.it2{
-	transform: rotateY(40deg) translateZ(50vh);
-}
-.it3{
-	transform: rotateY(80deg) translateZ(50vh);
-}
-.it4{
-	transform: rotateY(120deg) translateZ(50vh);
-}
-.it5{
-	transform: rotateY(160deg) translateZ(50vh);
-}
-.it6{
-	transform: rotateY(200deg) translateZ(50vh);
-}
-.it7{
-	transform: rotateY(240deg) translateZ(50vh);
-}
-.it8{
-	transform: rotateY(280deg) translateZ(50vh);
-}
-.it9{
-	transform: rotateY(320deg) translateZ(50vh);
-}
-.it10{
-	transform: rotateY(360deg) translateZ(50vh);
-}
-.carousel-item-foods{
-	 box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.288);
-	 border-radius: 3vh;
-   position: relative;
-
-}
-
-.carousel-foods .img{
-	transition: ease-in-out 0.5s;
-	width: 100%;
-	height: 100%;
-}
-.carousel-item-foods:hover .img {
-	transition: all 0.5s;
-	position: absolute;
-  object-fit: cover;
-}
-.carousel-foods:hover {
-	animation-play-state: paused;
-	cursor: pointer;
-}
-/* animation rotate */
-@keyframes rotate {
-	from {
-		transform: rotateY(0deg);
-	} to {
-		transform: rotateY(360deg);
-	}
-}
-
-.carousel-item-foods .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.603);
-  text-align: center;
-  color: #fff;
-  border-radius: 20px;
-  opacity: 0;
-}
-
-.carousel-item-foods:hover .overlay {
-  opacity: 1;
-
-
-  padding: 15px 10px 20px;
-
-}
-
-.carousel-item-foods .overlay h1 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.carousel-item-foods .overlay p {
-  font-size: 0.65rem;
-}
-
-.carousel-item-foods .overlay button {
-  font-size: 0.6rem;
-  color: white;
-  border-color: rgba(0, 0, 0, 0.555);
-  box-shadow: 0 0 10px rgb(27, 27, 27);
+  
 }
 
 /* blogs  */
@@ -827,7 +664,7 @@ svg #arrow {
   background: #fff;
   font-family: "Acme";
   perspective: 600px;
-  margin: 50px 0;
+  margin: 100px 0;
 
   
 }
@@ -1249,7 +1086,143 @@ body #wrapper .card:nth-of-type(3) .content .inner:after {
 
 /*# sourceMappingURL=styles.css.map */
 
+/* foods  */
 
+.foods {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  position: relative;
+  
+  background-image: url(../img/danangtrip11.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.foods::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.658);
+}
+
+.carousel-foods {
+  width: 100%;
+  padding: 30px;
+  padding-top: 80px;
+  position: relative;
+  z-index: 100;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.carousel__container {
+  white-space: nowrap;
+  margin: 70px 0px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.categories__title {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.3rem !important;
+
+  position: relative;
+}
+
+.categories__title::before {
+  content: "";
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  width: 7%;
+  height: 2px;
+  background-color: #e2c93c;
+  transform: translateX(-50%);
+}
+
+.carousel-item {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: #95bcd6;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-top: 70px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: 1000ms all;
+  transition: 1000ms all;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+  position: relative;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  -webkit-transform: translate3d(100px, 0, 0);
+  transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.carousel-item__details {
+  font-size: 10px;
+  opacity: 0;
+  -webkit-transition: 450ms opacity;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.carousel-item__details:hover {
+  opacity: 1;
+}
+
+.carousel-item__details span {
+  /* width: 10px;
+  height: 10px; */
+  font-size: 0.9rem;
+  color: #2ecc71;
+  /* background-color: white; */
+}
+
+.carousel-item__details .controls {
+  padding-top: 180px;
+}
+
+.carousel-item__details .carousel-item__details--title,
+.carousel-item__details--subtitle {
+  color: #fff;
+  margin: 5px 0;
+}
 
 
 
