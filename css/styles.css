@@ -492,6 +492,8 @@ height: 60px;
 }
 .slide__image--left {
   transform: translate(0.75%, -10px);
+  top: 35% !important;
+  left: -4% !important;
 }
 .slide__image--right {
   top: 5vmin;
