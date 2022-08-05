@@ -303,14 +303,14 @@ svg #arrow {
 
 /* click button  */
 .click-button {
-
+height: 60px;
   
 }
 
 .block-img-click {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  height: 100px;
+  height: 100%;
   
   
  
@@ -320,7 +320,7 @@ svg #arrow {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 60%;
+  height: 100%;
   
 
   position: relative;
@@ -374,21 +374,33 @@ svg #arrow {
 /* destinations */
 .destinations {
   width: 100%;
-  height: 700px;
-  margin: 0 auto;
+  height: 750px;
+  margin: 0 auto ;
   position: relative;
+
+  font-family: Philosopher;
   
 
 
 }
 
+.destination-title {
+  
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+}
+
 .destination-title h1 {
   text-align: center;
-  margin-bottom: 70px;
+  
   text-transform: uppercase;
   font-weight: bold;
 
   position: relative;
+  z-index: 100;
   
 }
 
@@ -399,12 +411,124 @@ svg #arrow {
   left: 50%;
   transform: translateX(-50%);
 
-  width: 8%;
+  width: 60%;
   height: 2px;
   background-color: orange;
 
 }
 
+
+.header__main {
+  height: 100%;
+  overflow: hidden;
+  text-align: left;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__mask { 
+  top: 0; 
+  left: 0;
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+
+  height: 100%;
+  position: absolute;
+
+  width: 100%;
+}
+.slide:target .slide__bg {
+  opacity: 1;
+}
+.slide:target .slide__image {
+  transform: translate(0);
+  opacity: 1;
+  transition-delay: 0.5s;
+  filter: blur(0) drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.35));
+}
+
+.slide__bg {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  filter: blur(50px);
+  opacity: 0;
+  transition: opacity 1s ease;
+  will-change: opacity;
+}
+
+.slide__images {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 365px;
+  margin: 0 20px;
+}
+
+.slide__image {
+  position: absolute;
+  top: 40% !important;
+  left: -3%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out 0s;
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.35));
+  will-change: transform, opacity, filter;
+}
+.slide__image svg {
+  display: block;
+}
+.slide__image--left {
+  transform: translate(0.75%, -10px);
+}
+.slide__image--right {
+  top: 5vmin;
+  transform: translate(-0.75%, 10px);
+}
+
+.slider__pagination {
+  position: absolute;
+  z-index: 100%;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
+}
+
+.slider__pagination .button {
+  position: relative;
+  display: inline-block;
+  padding: 20px 40px;
+  border: 2px solid #fff;
+  line-height: 1;
+  font: 600 12px "Montserrat", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: white;
+  transition: all 0.25s ease;
+  appearance: none;
+  margin: 0 20px;
+}
+
+.slider__pagination .button:hover {
+  color: #333;
+  background-color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
 
 
 
