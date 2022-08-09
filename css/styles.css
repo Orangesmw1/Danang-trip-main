@@ -511,10 +511,11 @@ height: 60px;
 .slider__pagination .button {
   position: relative;
   display: inline-block;
-  padding: 20px 40px;
+  padding: 15px 30px;
   border: 2px solid #fff;
   line-height: 1;
-  font: 600 12px "Montserrat", sans-serif;
+  font-family: Philosopher;
+  font-weight: bold;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
