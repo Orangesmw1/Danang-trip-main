@@ -2,7 +2,7 @@
 window.location.href="#myNav";
 
 
-// window.location.href="#slide-1";
+window.location.href="#slide-1";
 
 
 

@@ -1213,9 +1213,16 @@ body #wrapper .card:nth-of-type(3) .content .inner:after {
 }
 
 
+/* block_food-contact  */
+
+.block_food-contact {
+  background-image: url(../img/danangtrip11.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
 
 
-
+}
 
 /* foods  */
 
@@ -1228,10 +1235,7 @@ body #wrapper .card:nth-of-type(3) .content .inner:after {
 
   position: relative;
   
-  background-image: url(../img/danangtrip11.jpg);
-  background-position: bottom;
-  background-size: cover;
-  background-attachment: fixed;
+ 
 }
 
 .foods::after {
@@ -1372,5 +1376,103 @@ body #wrapper .card:nth-of-type(3) .content .inner:after {
 }
 
 
+/* contact  */
+
+.contact {
+  height: 760px;
+  padding-bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 
+  background-color: rgba(0, 0, 0, 0.658);
+}
+
+.contact-title {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold !important;
+  text-align: center;
+  font-size: 2.3rem !important;
+
+  position: relative;
+}
+
+.contact-title::before {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #e2c93c;
+  transform: translateX(-50%);
+}
+
+.block-contact {
+  width: 70%;
+  height: 100%;
+  margin-top: 60px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  color: white;
+  background: rgba(158, 157, 157, 0.144);
+  border-radius: 20px;
+}
+
+
+.contact-img {
+  
+
+}
+
+
+
+.contact-img .img-of-contact {
+  object-fit: cover !important; 
+  height: 50px !important;
+  width: 100% !important;
+}
+
+/* ------------ footer -----------  */
+
+
+.copyright {
+  background: white;
+  color: black;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.copyright-content {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+
+}
+
+.copyright-content a {
+  color: black;
+  text-decoration: none;
+  transition: all linear 0.2s;
+}
+
+.copyright-content a:hover {
+  color: #35a22c;
+}
+
+.copyright-content p {
+  margin: 0;
+}
