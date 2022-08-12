@@ -1428,16 +1428,41 @@ body #wrapper .card:nth-of-type(3) .content .inner:after {
 
 
 .contact-img {
-  
-
+    width: 50%;
+    height: 100%;
+    padding: 30px 20px 30px 40px ;
 }
-
-
 
 .contact-img .img-of-contact {
   object-fit: cover !important; 
-  height: 50px !important;
+  height: 100% !important;
   width: 100% !important;
+  
+  border-radius: 20px;
+  
+}
+
+.contact-email {
+  width: 50%;
+  height: 100%;
+  
+}
+
+.contact-email form  {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  margin-top: 60px;
+  margin-left: 20px;
+ 
+
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.block-form-email {
+  width: 90%;
 }
 
 /* ------------ footer -----------  */
